@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Builder</title>
+</head>
+<body>
+<h1>Vocabulary List</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Word</th>
+        <th>Definition</th>
+        <th>Phonetic Transcription</th>
+        <th>Example Sentence</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="word : ${words}">
+        <td th:text="${word.word}"></td>
+        <td th:text="${word.definition}"></td>
+        <td th:text="${word.phoneticTranscription}"></td>
+        <td th:text="${word.exampleSentence}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
