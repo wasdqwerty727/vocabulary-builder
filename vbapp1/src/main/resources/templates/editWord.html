@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Word</title>
+</head>
+<body>
+<h1>Edit Word</h1>
+
+<form action="#" th:action="@{/vocabulary/updateWord}" method="post">
+    <input type="hidden" name="id" th:value="${word.id}"/>
+    <label for="word">Word:</label>
+    <input type="text" id="word" name="word" th:value="${word.word}" required/>
+    <br/>
+    <label for="translation">Translation:</label>
+    <input type="text" id="translation" name="translation" th:value="${word.translation}" required/>
+    <br/>
+    <button type="submit">Update Word</button>
+</form>
+
+<a href="#" th:href="@{/vocabulary/words/{userId}(userId=${word.user.id})}">Back to Words</a>
+
+</body>
+</html>
